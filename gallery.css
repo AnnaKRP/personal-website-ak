@@ -1,0 +1,125 @@
+/* script for styling hobbies section */
+
+body{
+    counter-reset: count 0;
+}
+
+#hobbies {
+    background: linear-gradient(
+    to right, 
+    #252E40 0%, 
+    #252E40 100% 
+    );
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+}
+
+#hobContainer {
+    width: 100%;
+    height: 550px;
+    background:  #f9f8fd;
+    padding-top: 40px;
+    border-top: solid 7px #E96252;
+    border-bottom: solid 7px #E96252;
+}
+
+#gallery {
+    width: 100%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#gallery div {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: all 0.5s ease-out;
+  filter: grayscale(90%);
+}
+
+/* make an image bigger on hover */
+#gallery div:hover {
+  flex: 4;
+  filter: grayscale(0%);
+}
+
+/* set a content of each image to a counter */
+.imgOne::after, .imgTwo::after, .imgThree::after, .imgFour::after, .imgFive::after, .imgSix::after, .imgSeven::after {
+    counter-increment: count;
+    content: counter(count);
+    color: #f9f8fd;
+    position: absolute;
+    font-size: 30px;
+    font-family: 'Playball', cursive;
+    bottom: -30px;
+    left: 20px;
+    padding: 5px;
+    background-color: #252E40;
+    border-radius: 5px;
+}
+
+/* change a content of each image on hover to give a description */
+.imgOne:hover::after{
+     content: "";
+}
+
+.imgTwo:hover::after{
+     content: "";
+}
+
+.imgThree:hover::after{
+     content: "";
+}
+
+.imgFour:hover::after{
+     content: "";
+}
+
+.imgFive:hover::after{
+     content: "";
+}
+
+.imgSix:hover::after{
+     content: "";
+}
+
+.imgSeven:hover::after{
+    content: "";
+}
+
+/* set background for each div */
+.imgOne{
+  background-image: url("");
+}
+
+.imgTwo {
+  background-image: url("");
+}
+
+.imgThree {
+  background-image: url("");
+}
+
+.imgFour {
+  background-image: url("");
+}
+
+.imgFive {
+  background-image: url("");
+}
+
+.imgSix {
+  background-image: url("");
+}
+
+.imgSeven {
+    background-image: url("");
+}

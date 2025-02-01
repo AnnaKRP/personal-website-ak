@@ -1,0 +1,95 @@
+/* script for styling titles and lines on a side */
+
+/* content titles */
+#aboutTitle, #expTitle, #edTitle, #skillsTitle, #hobTitle, #proTitle, #contactTitle {
+    position: relative;
+    width: 30%;
+    left: 10%;
+    font-family: 'Playball', cursive;
+    font-size: 52px;
+    color: #BFB45C;
+    border-bottom: solid 5px #E96252;
+    border-top: solid 5px #E96252;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#expTitle, #skillsTitle, #contactTitle{
+    color: #252E40;
+}
+
+/* position contact title at the middle of the page */
+#contactTitle{
+    border-bottom: 0px;
+    width: 80%;
+    text-align: center;
+}
+
+/* lines on a side */
+/* draw lines before titles */
+#aboutTitle::before, #expTitle::before, #edTitle::before, #skillsTitle::before, #hobTitle::before, #proTitle::before, #contactTitle::before{
+    content: "";
+    background: #E96252;
+    height: 400px;
+    width: 7px;
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+}
+
+#aboutTitle::before{
+    height: 150px;
+}
+
+#edTitle::before{
+    height: 1100px;
+}
+
+#proTitle::before{
+    height: 100px;
+}
+
+#contactTitle::before {
+    height: 1200px;
+}
+
+/* draw lines after titles */
+#aboutTitle::after, #expTitle::after, #edTitle::after, #skillsTitle::after, #hobTitle::after, #proTitle::after{
+    content: "";
+    background: #E96252;
+    height: 500px;
+    width: 7px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+}
+
+#aboutTitle::after{
+    height: 700px;
+}
+
+#expTitle::after{
+    height: 1000px;
+}
+
+#edTitle::after{
+    height: 400px;
+}
+
+#proTitle::after {
+    height: 1100px;
+}
+
+#hobTitle::after {
+    height: 50px;
+}
+
+/* iPad screen size adjustments */
+@media only screen and (max-width: 1024px) {
+  
+}
+
+/* phone screen size adjustments */
+@media only screen and (max-width: 764px) {
+
+}

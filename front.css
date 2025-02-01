@@ -1,0 +1,264 @@
+/* front images display script */
+
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+#front {
+    width: 100%;
+    height: 1800px;
+    position: relative;
+    top: 0;
+    margin: 0;
+    font-family: 'Rancho', cursive;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient( #252E40, #A8B0BF);
+    z-index: 2;
+}
+
+#frontImages {
+    position: absolute;
+    height: 800px;
+    width: 100%;
+    top: 1000px;
+    filter: grayscale(20%);
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#frontImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(10%);
+    opacity: 0.9;
+   
+}
+
+.mainImg {
+    width: 100%;
+    height: 800px;
+    position: fixed;
+    top: -1000px;
+    transition: all 1s;
+}
+
+
+#title {
+    position: fixed;
+    z-index: 1;
+    text-align: center;
+}
+
+#shortdes {
+    color: #252E40;
+    opacity: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    animation: text 2s ease-in;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    padding: 30px;
+    margin-bottom: 250px;
+    font-size: 56px;
+    font-family: 'Playball', cursive;
+}
+
+/* scroll down button */
+#scrollDown{
+    animation: scrolldown 2s ease-in infinite;
+    animation-delay: 3s;
+    opacity: 1;
+    font-size: 22px;
+    border: solid 3px #F8FDFF;
+    border-radius: 50px;
+    display: inline;
+    padding: 15px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #F8FDFF;
+}
+
+#scrollDown:hover{
+    background: #F8FDFF;
+    animation: scrolldown 2s;
+    animation-fill-mode: forwards;
+}
+
+a:hover {
+    color:#E96252;
+}
+
+@keyframes text{
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes scrolldown {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* main image */
+.face{
+  width: 500px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  border: solid 5px #BFB45C;
+  margin-top: 50px;
+}
+
+.bottom{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.twof {
+   width: 450px;
+   height: 450px;
+}
+
+.threef {
+   width: 400px;
+   height: 400px;
+   animation: text 2s ease-in;
+   animation-delay: 1s;
+}
+
+.fourf {
+  width: 350px;
+   height: 350px;
+}
+
+.fivef {
+  width: 300px;
+  height: 300px;
+  border: dotted 8px #BFB45C;
+}
+
+.sixf {
+  width: 250px;
+   height: 250px;
+  background: #BFB45C;
+}
+
+.eyes {
+  width: 90%;
+  height: 10px;
+  position: relative;
+  top: 110px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.eye{
+  width: 70px;
+  height: 5px;
+  background: #57594F;
+  border-radius: 40%;
+}
+
+.lips{
+  height: 30px;
+  width: 60px;
+  background: #E96252;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 130px;
+  border-radius: 75px 75px 70px 70px/15px 15px 60px 60px;
+}
+
+.cheeks {
+  width: 90%;
+  height: 50px;
+  position: relative;
+  top: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cheek{
+  width: 70px;
+  height: 50px;
+  background: #E96252;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.right{
+  float: right;
+}
+
+.earrings{
+  height: 120px;
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: -40px;
+}
+
+.earring{
+  height: 100%;
+  width: 60px;
+  background: black;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  border-radius: 30%;
+  background: #E96252;
+}
+
+.necklace{
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 250px;
+  border-radius: 50%;
+  border: dotted 26px #E96252;
+  position: relative;
+  top: -160px;
+  z-index: -1;
+}
+
+.necklacetwo{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 70%;
+  position: relative;
+  border-radius: 50%;
+  border: dotted 20px #E96252;
+}
+
+.necklacethree{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50%;
+  position: relative;
+  border-radius: 50%;
+  border: dotted 15px #E96252;
+}
+
+.necklacethree::after{
+    content: " ";
+    display: block;
+    background: #E96252;
+    height: 400px;
+    width: 7px;
+    position: absolute;
+    top: 200px;
+}
