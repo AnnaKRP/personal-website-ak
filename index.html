@@ -3,8 +3,6 @@
 
 <head>
 	<title>Anna Karpiuk</title>
-
-	<!-- meta -->
 	<meta charset="UTF-8">
 	<meta name="description" content="Hello! I'm Anna Karpiuk, service desk engineer based in Dublin.
 	 Having a passion to web delopment and front-end design.">
@@ -12,6 +10,7 @@
 	<meta name="author" content="Anna Karpiuk">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv=“X-UA-Compatible” content=“ie-edge”>
+	<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 
 	<!-- link to all css scripts -->
 	<link rel="stylesheet" href="main.css">
@@ -88,6 +87,11 @@
 			<li><a href="#projects"><span>My Projects</span></a></li>
 			<li><a href="#contact"><span>Get in Touch</span></a></li>
 		</ul>
+		<!-- burger -->
+		<button id="burger-menu" class="burger-menu" aria-label="Toggle menu">
+			<span></span>
+			<span></span>
+		</button>
 	</header>
 
 	<!-- main content -->
@@ -96,7 +100,7 @@
 		<section id="about">
 			<h1 id="aboutTitle">About me</h1>
 			<div id="aboutInfo">
-				<img id="myImg" src="images/mee.jpg" alt="">
+				<img id="myImg" src="assets/me.jpg" alt="">
 				<p> Experienced and customer-focused professional with a proven track record in technical support and service desk
                     roles over the past 4 years. Equipped with a strong background in office administration and customer service,
                     complemented by previous studies in IT technologies. Looking new career opportunities.</p>
@@ -226,9 +230,9 @@
 				<h2>Languages</h2>
 				<p>Ukrainian</p>
 				<p>★★★★★</p>
-				<p>Russian</p>
-				<p>★★★★★</p>
 				<p>English</p>
+				<p>★★★★★</p>
+				<p>Russian</p>
 				<p>★★★★★</p>
 				<p>German</p>
 				<p>★☆☆☆☆</p>
@@ -342,6 +346,8 @@
 		</footer>
 
 	</div>
+
+	<script src="./server.js"></script>
 
 </body>
 
