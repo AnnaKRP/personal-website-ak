@@ -17,7 +17,7 @@ body {
 }
 
 #content{
-    height:100%;
+    height: 100%;
     background: #f9f8fd;
     position: relative;
     z-index: 2;
@@ -30,11 +30,7 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-    to right, 
-    #252E40 0%, 
-    #252E40 100% 
-    );
+    background: linear-gradient(to right, #252E40 0%, #252E40 100%);
     background-size: 50% 100%;
     background-repeat: no-repeat;
     padding-top: 80px;
@@ -158,7 +154,7 @@ body {
 .skillsGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 30%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
@@ -174,19 +170,14 @@ body {
 }
 
 .skillsGrid p{
-    border-radius: 22px;
-    height: 10px;
     text-align: center;
+    margin: 12px;
 }
 
 /* project's section */
 #projects {
     position: relative;
-    background: linear-gradient(
-    to right, 
-    #252E40 0%, 
-    #252E40 100% 
-    );
+    background: linear-gradient(to right, #252E40 0%, #252E40 100%);
     background-size: 50% 100%;
     background-repeat: no-repeat;
     width: 100%;
@@ -237,7 +228,7 @@ body {
 
 .proImg {
     width: 100%;
-    height: 300px;
+    height: 250px;
     object-fit: cover;
     transition: all 2s;
     filter: grayscale(80%);
@@ -320,4 +311,24 @@ footer p {
 
 #socialMedia img:hover{
     filter: grayscale(10%);
+}
+
+
+/* iPad screen size adjustments */
+@media screen and (max-width: 768px) {
+    #myImg {
+        width: 250px;
+        height: 250px;
+    }
+    
+    #aboutInfo {
+        padding: 25px;
+        outline-offset: 15px;
+        font-size: 20px;
+    }
+}
+  
+/* phone screen size adjustments */
+@media screen and (max-width: 570px) {
+
 }

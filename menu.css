@@ -115,15 +115,15 @@ header li a {
 }
 
 /* iPad screen size adjustments */
-@media only screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   header ul li a {
     margin: 5px;
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
 /* phone screen size adjustments */
-@media only screen and (max-width: 764px) {
+@media screen and (max-width: 570px) {
   header {
     height: 60px;
   }

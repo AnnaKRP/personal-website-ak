@@ -1,15 +1,15 @@
-/* script for styling titles and lines on a side */
+/* script for styling TITLES and LINES on a side */
 
 /* content titles */
 #aboutTitle, #expTitle, #edTitle, #skillsTitle, #hobTitle, #proTitle, #contactTitle {
     position: relative;
-    width: 30%;
+    width: 35%;
     left: 10%;
     font-family: 'Playball', cursive;
     font-size: 52px;
     color: #BFB45C;
-    border-bottom: solid 5px #E96252;
-    border-top: solid 5px #E96252;
+    border-bottom: solid 6px #E96252;
+    border-top: solid 6px #E96252;
     padding-right: 15px;
     padding-left: 15px;
 }
@@ -42,7 +42,11 @@
 }
 
 #edTitle::before{
-    height: 1100px;
+    height: 1200px;
+}
+
+#hobTitle::before {
+    height: 600px;
 }
 
 #proTitle::before{
@@ -69,7 +73,7 @@
 }
 
 #expTitle::after{
-    height: 1000px;
+    height: 1200px;
 }
 
 #edTitle::after{
@@ -85,11 +89,14 @@
 }
 
 /* iPad screen size adjustments */
-@media only screen and (max-width: 1024px) {
-  
+@media screen and (max-width: 768px) {
+    #aboutTitle, #expTitle, #edTitle, #skillsTitle, #hobTitle, #proTitle, #contactTitle {
+        font-size: 36px;
+        padding: 12px 15px;
+    }    
 }
-
+  
 /* phone screen size adjustments */
-@media only screen and (max-width: 764px) {
+@media screen and (max-width: 570px) {
 
 }
