@@ -54,7 +54,7 @@
 }
 
 #contactTitle::before {
-    height: 1200px;
+    height: 1000px;
 }
 
 /* draw lines after titles */
@@ -81,22 +81,58 @@
 }
 
 #proTitle::after {
-    height: 1100px;
+    height: 1000px;
 }
 
 #hobTitle::after {
-    height: 50px;
+    height: 51px;
 }
 
 /* iPad screen size adjustments */
 @media screen and (max-width: 768px) {
     #aboutTitle, #expTitle, #edTitle, #skillsTitle, #hobTitle, #proTitle, #contactTitle {
+        width: 45%;
         font-size: 36px;
         padding: 12px 15px;
     }    
+
+    #edTitle::before{
+        height: 1500px;
+    }
+
+    #hobTitle::after {
+        height: 40px;
+    }
+
+    #proTitle::before{
+        height: 82px;
+    }
+
+    #contactTitle{
+        border-bottom: 0px;
+        width: 80%;
+        text-align: center;
+    }
 }
   
 /* phone screen size adjustments */
 @media screen and (max-width: 570px) {
+    #aboutTitle, #expTitle, #edTitle, #skillsTitle, #hobTitle, #proTitle, #contactTitle {
+        font-size: 26px;
+        padding: 17px 20px;
+    }   
 
+    #hobTitle::after {
+        height: 30px;
+    }
+
+    #proTitle::before{
+        height: 80px;
+    }
+
+    #contactTitle{
+        border-bottom: 0px;
+        width: 80%;
+        text-align: center;
+    }
 }

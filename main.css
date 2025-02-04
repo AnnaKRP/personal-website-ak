@@ -37,38 +37,50 @@ body {
 }
 
 #myImg {
-    margin-left: auto;
-    margin-right: auto;
     width: 300px;
     height: 300px;
     object-fit: cover;
     border-radius: 50%;
-    filter: grayscale(40%);
 }
 
 #aboutInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: left;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
     background: #f9f8fd;
     padding: 25px;
     color: #4F5259;
-    text-align: center;
+    text-align: left;
     outline: 4px solid #252E40;
     outline-offset: 15px;
-    font-size: 24px;
+    font-size: 22px;
+    line-height: 1.3em;
+}
+
+#aboutInfo b {
+    color: #252E40;
+}
+
+#aboutInfo span {
+    background-color: #252E40;
+    color: #f9f8fd;
+    border-radius: 10px;
 }
 
 /* experience section */
 #experience {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
     position: relative; 
     top: 0;
     width: 100%;
     height: 100%;
     background: #f9f8fd;
-    display: flex;
-    align-content: center;
-    flex-direction: column;
     margin-top: 30px;
 }
 
@@ -85,7 +97,7 @@ body {
     color: #4F5259;
 }
 
-.expContent::before{
+.expContent::before {
     content: "";
     background: #E96252;
     border-radius: 50%;
@@ -93,20 +105,37 @@ body {
     height: 30px;
     position: absolute;
     left: -12px;
-    top: 20%;
+    top: 35px;
 }
 
 .year {
     float: left;
-    padding: 10px;
-    margin-right: 20px;
+    padding: 8px;
+    margin: 0;
     height: 100%;
+    font-size: 22px;
 }
 
 .expDescription {
     padding-left: 50px;
     font-size: 20px;
-    margin-left: 190px;
+    margin-left: 150px;
+}
+
+.expDescription p {
+    margin: 10px;
+}
+
+.exp-skills {
+    line-height: 2.6em;
+}
+
+.expContent span {
+    color: #252E40;
+    border-radius: 10px;
+    font-size: 1.2em;
+    padding: 6px;
+    border: dotted 2px #252E40;
 }
 
 /* education section */
@@ -114,11 +143,7 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-    to right, 
-    #252E40 0%, 
-    #252E40 100% 
-    );
+    background: linear-gradient(to right, #252E40 0%, #252E40 100% );
     background-size: 50% 100%;
     background-repeat: no-repeat;
     padding-top: 30px;
@@ -162,29 +187,29 @@ body {
     font-size: 20px;
 }
 
-.skillsGrid h2{
+.skillsGrid h2 {
     grid-column: 1 / 3;
     border-bottom: dotted 1px #E96252;
     font-family: 'Rancho', cursive;
     text-align: center;
 }
 
-.skillsGrid p{
+.skillsGrid p {
     text-align: center;
     margin: 12px;
 }
 
 /* project's section */
 #projects {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
     position: relative;
     background: linear-gradient(to right, #252E40 0%, #252E40 100%);
     background-size: 50% 100%;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-content: center;
-    flex-direction: column;
     padding-top: 50px;
     margin-bottom: 50px;
 }
@@ -278,12 +303,15 @@ mark {
 
 /* footer */
 footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 80px;
     width: 100%;
     background: #252E40;
     border-top: solid 4px #E96252;
     color: #f9f8fd;
-    font-family: 'Cormorant', serif;
+    font-family: 'Rancho', cursive;
 }
 
 footer p {
@@ -296,26 +324,30 @@ footer p {
 
 #socialMedia {
     width: auto;
-    height: 100%;
     float: right;
     position: relative;
     margin-right: 10px;
 }
 
 #socialMedia img {
+    position: relative;
     width: 50px;
     height: 50px;
     margin: 10px 15px;
-    filter: grayscale(90%);
+    transition: transform 0.3s ease; 
 }
 
-#socialMedia img:hover{
-    filter: grayscale(10%);
+#socialMedia img:hover {
+    transform: scale(1.1);
 }
 
 
 /* iPad screen size adjustments */
 @media screen and (max-width: 768px) {
+    #about, #education, #projects { 
+        background-size: 70% 100%;
+    }
+
     #myImg {
         width: 250px;
         height: 250px;
@@ -326,9 +358,121 @@ footer p {
         outline-offset: 15px;
         font-size: 20px;
     }
+    
+    .expContent {
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+    }
+    
+    .year {
+        padding: 10px;
+        font-size: 22px;
+    }
+    
+    .expDescription {
+        padding-left: 0px;
+        font-size: 20px;
+        margin-left: 0px;
+    }
+
+    .exp-skills {
+        line-height: 2.4em;
+    }
+    
+    .expContent span {
+        font-size: 1em;
+        padding: 5px;
+    }
+
+    #edList{
+        padding: 20px;
+    }
+
+    .skillsGrid {
+        padding: 6px;
+        font-size: 16px;
+    }
+
+    .skillsGrid p {
+        margin: 10px;
+    }
+
+    #projContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        gap: 5px;
+        padding: 20px;
+    }
+
+    .proCard {
+        width: 80%;
+    }
+
+    footer p {
+        font-size: 16px;
+    }
+
+    #socialMedia img {
+        width: 40px;
+        height: 40px;
+        margin: 10px 13px;
+    }
 }
   
 /* phone screen size adjustments */
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 490px) {
+    #myImg {
+        width: 200px;
+        height: 200px;
+    }
+    
+    #aboutInfo {
+        padding: 10px;
+        outline-offset: 10px;
+        font-size: 16px;
+    }
 
+    .year {
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+    .expDescription {
+        padding-left: 0px;
+        font-size: 14px;
+        margin-left: 0px;
+    }
+
+    .exp-skills {
+        line-height: 2em;
+    }
+    
+    .expContent span {
+        font-size: 0.8em;
+        padding: 4px;
+    }
+
+    #edList{
+        font-size: 14px;
+    }
+
+    .skillsGrid {
+        width: 70%;
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .skillsGrid p {
+        margin: 8px;
+    }
+
+    #socialMedia img {
+        width: 40px;
+        height: 40px;
+        margin: 10px 7px;
+    }
 }

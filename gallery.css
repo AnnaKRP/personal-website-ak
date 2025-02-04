@@ -1,38 +1,34 @@
 /* script for styling hobbies section */
 
 body{
-    counter-reset: count 0;
+  counter-reset: count 0;
 }
 
 #hobbies {
-    background: linear-gradient(
-    to right, 
-    #252E40 0%, 
-    #252E40 100% 
-    );
-    background-size: 50% 100%;
-    background-repeat: no-repeat;
-    padding-top: 30px;
+  background: linear-gradient(to right, #252E40 0%, #252E40 100%);
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  padding-top: 30px;
 }
 
 #hobContainer {
-    width: 100%;
-    height: 550px;
-    background:  #f9f8fd;
-    padding-top: 40px;
-    border-top: solid 7px #E96252;
-    border-bottom: solid 7px #E96252;
+  width: 100%;
+  height: 550px;
+  background:  #f9f8fd;
+  padding-top: 40px;
+  border-top: solid 7px #E96252;
+  border-bottom: solid 7px #E96252;
 }
 
 #gallery {
-    width: 100%;
-    height: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+  width: 100%;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 #gallery div {
@@ -47,79 +43,91 @@ body{
 
 /* make an image bigger on hover */
 #gallery div:hover {
-  flex: 4;
+  flex: 3;
   filter: grayscale(0%);
 }
 
 /* set a content of each image to a counter */
-.imgOne::after, .imgTwo::after, .imgThree::after, .imgFour::after, .imgFive::after, .imgSix::after, .imgSeven::after {
-    counter-increment: count;
-    content: counter(count);
-    color: #f9f8fd;
-    position: absolute;
-    font-size: 30px;
-    font-family: 'Playball', cursive;
-    bottom: -30px;
-    left: 20px;
-    padding: 5px;
-    background-color: #252E40;
-    border-radius: 5px;
+.imgOne::after, .imgTwo::after, .imgThree::after, .imgFour::after, .imgFive::after, .imgSix::after {
+  counter-increment: count;
+  content: counter(count);
+  color: #f9f8fd;
+  position: absolute;
+  font-size: 30px;
+  font-family: 'Playball', cursive;
+  bottom: -30px;
+  left: 20px;
+  padding: 5px;
+  background-color: #252E40;
+  border-radius: 5px;
 }
 
 /* change a content of each image on hover to give a description */
 .imgOne:hover::after{
-     content: "";
+  content: "Reading";
 }
 
 .imgTwo:hover::after{
-     content: "";
+  content: "Painting";
 }
 
 .imgThree:hover::after{
-     content: "";
+  content: "Cooking";
 }
 
 .imgFour:hover::after{
-     content: "";
+  content: "Hiking";
 }
 
 .imgFive:hover::after{
-     content: "";
+  content: "Cross stiching";
 }
 
 .imgSix:hover::after{
-     content: "";
-}
-
-.imgSeven:hover::after{
-    content: "";
+  content: "Gardening";
 }
 
 /* set background for each div */
 .imgOne{
-  background-image: url("");
+  background-image: url("assets/read.jpg");
 }
 
 .imgTwo {
-  background-image: url("");
+  background-image: url("assets/paint.jpg");
 }
 
 .imgThree {
-  background-image: url("");
+  background-image: url("assets/cooking.jpg");
 }
 
 .imgFour {
-  background-image: url("");
+  background-image: url("assets/hiking.jpg");
 }
 
 .imgFive {
-  background-image: url("");
+  background-image: url("assets/cross.jpg");
 }
 
 .imgSix {
-  background-image: url("");
+  background-image: url("assets/garden.jpg");
 }
 
-.imgSeven {
-    background-image: url("");
+
+/* iPad screen size adjustments */
+@media screen and (max-width: 768px) {
+  #hobbies {
+    background-size: 70% 100%;
+  }
+
+  #hobContainer {
+    height: 450px;
+  }
+
+  #gallery {
+    height: 300px;
+  }
+}
+
+/* phone screen size adjustments */
+@media screen and (max-width: 490px) {
 }
